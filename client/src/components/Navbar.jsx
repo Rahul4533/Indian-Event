@@ -1,78 +1,57 @@
-import React from "react";
-import "./navbar.css";
-import img from "../assects/image/indian.JPG";
-import { useState } from "react";
-import { NavDropdown } from "react-bootstrap";
-import { Bhojpuri, BollyWood, Bengali, Punjabi,videos } from "../Data/data.js";
-import Actor from "./Actor.jsx";
-const Logo = () => {
-  const [actor, setActor] = useState();
-  const [video,setvideo]=useState(videos);
-  console.log(actor);
-  
-  const handleSelect = (e) => {
-    if (e === "Bhojpuri") {
-      setActor(Bhojpuri);
-    } else if (e === "Bollywood") {
-      setActor(BollyWood);
-    } else if (e === "Bengali") {
-      setActor(Bengali);
-    } else {
-      setActor(Punjabi);
-      
-    }
-  };
-    
+import React from 'react';
+import { useState } from 'react';
+import { CNavbar,
+  CButton,
+  CNavLink,CNavItem,CFormInput,CNavbarToggler,CDropdownItem,CDropdownToggle,CDropdownDivider,CDropdownMenu,CDropdown,CCollapse,CNavbarNav,CContainer,CNavbarBrand,CForm} from '@coreui/react';
+const Navbar  =()=> {
+  const [visible, setVisible] = useState(false)
+return (
+  <>
+    <CNavbar expand="lg" colorScheme="light" style={{ backgroundColor: '#e3f2fd' }}>
+      <CContainer fluid>
+        <CNavbarBrand href="#">Navbar</CNavbarBrand>
+        <CNavbarToggler
+          aria-label="Toggle navigation"
+          aria-expanded={visible}
+          onClick={() => setVisible(!visible)}
+        />
+        <CCollapse className="navbar-collapse" visible={visible}>
+          <CNavbarNav>
+            <CNavItem>
+              <CNavLink href="#" active>
+                Home
+              </CNavLink>
+            </CNavItem>
+            <CNavItem>
+              <CNavLink href="#">Link</CNavLink>
+            </CNavItem>
+            <CDropdown variant="nav-item" popper={false}>
+              <CDropdownToggle color="secondary">Dropdown button</CDropdownToggle>
+              <CDropdownMenu>
+                <CDropdownItem href="#">Action</CDropdownItem>
+                <CDropdownItem href="#">Another action</CDropdownItem>
+                <CDropdownDivider />
+                <CDropdownItem href="#">Something else here</CDropdownItem>
+              </CDropdownMenu>
+            </CDropdown>
+            <CNavItem>
+              <CNavLink href="#" disabled>
+                Disabled
+              </CNavLink>
+            </CNavItem>
+          </CNavbarNav>
+          <CForm className="d-flex">
+            <CFormInput type="search" className="me-2" placeholder="Search" />
+            <CButton type="submit" color="primary" variant="outline">
+              Search
+            </CButton>
+          </CForm>
+        </CCollapse>
+      </CContainer>
+    </CNavbar>
+  </>
+)
  
+  }
 
-  return (
-    <>
-      <div className="logo">
-        <img src={img} alt="logo" />
-
-        <ul className="links">
-          <NavDropdown
-            className="back"
-            title={
-              <button
-                className="btn btn-primary align-content-center back"
-                style={{ borderRadius: "15px", background: "" }}
-              >
-                Book Now
-              </button>
-            }
-            id="basic-nav-dropdown"
-          >
-            <NavDropdown.Item
-              href="#"
-              onClick={() => handleSelect("Bollywood")}
-            >
-              {
-                <button className="button " style={{ fontSize: "1rem" }}>
-                  {" "}
-                  Bollywood{" "}
-                </button>
-              }
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#" onClick={() => handleSelect("Bhojpuri")}>
-              {<button className="button">Bhojpuri</button>}
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#" onClick={() => handleSelect("Bengali")}>
-              {<button className="button">Bengali</button>}
-            </NavDropdown.Item>
-            <NavDropdown.Item href="#" onClick={() => handleSelect("Punjabi")}>
-              {<button className="button">Punjabi</button>}
-            </NavDropdown.Item>
-            {/* add more options here */}
-          </NavDropdown>
-           <button className="btn btn-btn-primary  rounded-1">Home</button>
-           <button className="fs-6 w-auto h-auto">Contact Us</button>
-           <button className="btn btn-btn-primary  rounded-1">Home</button>
-        </ul>
-      </div>
-      <Actor data={actor}  video={video}/>
-    </>
-  );
-};
-
-export default Logo;
+export default Navbar;
