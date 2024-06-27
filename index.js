@@ -2,6 +2,9 @@ import express from "express";
 import dotenv from 'dotenv'
 import connectDB from "./Config/Db.js";
 import router from "./Router/registerForm.js";
+import { dirname } from 'path';
+import { fileURLToPath } from 'url';
+import path from 'path';
 const port=8000;
 const app=express();
 dotenv.config();
