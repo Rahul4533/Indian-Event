@@ -9,11 +9,8 @@ import Navbar from './components/Navbar';
 
 
 const App = () => {
-  const [showTermsPopup, setShowTermsPopup] = useState(false);
 
-  const toggleTermsPopup = () => {
-    setShowTermsPopup(!showTermsPopup);
-  };
+  
 
   return (
     <Router>
