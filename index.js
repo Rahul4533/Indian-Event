@@ -9,7 +9,7 @@ const port=8000;
 const app=express();
 dotenv.config();
 connectDB(); 
-
+const __dirname = dirname(fileURLToPath(import.meta.url));
   
 //middle ware
 app.use(express.json());
@@ -18,7 +18,13 @@ app.use('/',router);
  
    
  
+app.use(express.static(path.join(__dirname, './client/dist')));
 
+// Handle all other routes by serving the 'index.html' file
+app.get('*', (req, res) => {
+    const index = join(__dirname, './client/dist/index.html');
+    res.sendFile(index);
+});
 
 
 app.listen(port,(err)=>{
