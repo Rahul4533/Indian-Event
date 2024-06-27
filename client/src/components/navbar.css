@@ -1,0 +1,111 @@
+body{
+  overflow-x: hidden;
+  background-color: antiquewhite;
+}
+
+.logo{
+    display: flex;
+   
+}
+.logo img{
+    margin: 0px;
+    height: 100px;
+    width: 100px;
+    
+}
+
+
+.links{
+    list-style-type: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 50%;
+}
+
+.links button{
+    margin-left: 10%;
+}
+
+
+
+.button {
+    /* Base styles */
+    font-size: 16px;
+    font-weight: bold;
+    color: #fff;
+    background: linear-gradient(135deg, #7a1f7d 0%, #4b0082 100%);
+    position:relative;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+  
+    /* Shadow effect */
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  
+    /* Transition effect for hover */
+    transition: background-color 0.3s, box-shadow 0.3s;
+  }
+  
+  .button:hover {
+    /* Hover effect */
+    background: linear-gradient(135deg, #6c1ecf 0%, #2f006e 100%);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
+
+  }
+
+  .button .tooltip {
+    visibility: hidden;
+    width: 80px;
+    background-color: #333;
+    color: #fff;
+    text-align: center;
+    border-radius: 5px;
+    padding: 5px 0;
+    position: absolute;
+    top: -35px; /* Position the tooltip above the button */
+    left: 50%;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: opacity 0.3s;
+    font-size: 14px;
+    z-index: 1;
+  }
+  
+  /* Tooltip arrow */
+  .button .tooltip::after {
+    content: "";
+    position: absolute;
+    top: 100%; /* Arrow pointing down */
+    left: 50%;
+    margin-left: -5px;
+    border-width: 5px;
+    border-style: solid;
+    border-color: #333 transparent transparent transparent;
+  }
+  
+  /* Show tooltip on button hover */
+  .button:hover .tooltip {
+    visibility: visible;
+    opacity: 1;
+  }
+
+  .back{
+       border: none;
+  }
+
+  @media (max-width: 768px) {
+    .logo {
+      justify-content: center;
+      margin-bottom: 10px;
+    }
+  
+    .links {
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+  
+    .links button {
+      margin: 5px;
+    }
+  }

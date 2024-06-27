@@ -1,0 +1,13 @@
+.form {
+  background: linear-gradient(135deg, #ff7e5f, #feb47b, #6a11cb, #2575fc); /* More dynamic gradient */
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Slightly darker shadow for more pop */
+  color: #fff; /* White text for better contrast */
+  text-align: center; /* Center align text */
+}
+
+.formh1,
+.form h4 {
+  margin-bottom: 20px;
+}
