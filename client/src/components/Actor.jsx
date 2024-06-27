@@ -1,29 +1,26 @@
 import React from 'react';
 import './actor.css';
-const Actor = React.memo(({ data ,video}) => {
+const Actor = React.memo(({ data }) => {
   // This will help you see when the component re-renders
-  
+   console.log(data);
   
   return (
-  <>
-   <div className='actor d-flex'>
-  {
-    data?.map((item,index)=>{
-      return(
-        <div className='actor__item' >
-          <div className='image-container' key={index}>
-            <img  src={item.image} alt={item.name} className='actor-image' />
-            <div className='hover-effect'></div>
-            <button>Submit</button>
-          </div>
-          <h3 className='actor-name'>{item.name}</h3>
-          
+    <>
+  <div className="card-container" style={{display: 'flex', flexWrap: 'wrap', justifyContent: 'space-between'}}>
+    {data?.map((item, index) => (
+      <div key={index} className="card-item">
+        <div>
+          <img className="card-img-top" src={item.image} alt="Card image cap" />
         </div>
-      )
-    })
-  }
-</div>
-    </>
+        <div className="card-body">
+          <h5 className="card-title">{item.name}</h5>
+          <a href="#" className="btn btn-primary">Go somewhere</a>
+        </div>
+      </div>
+    ))}
+  </div>
+</>
+
   );
 }, (prevProps, nextProps) => {
   // Custom comparison function

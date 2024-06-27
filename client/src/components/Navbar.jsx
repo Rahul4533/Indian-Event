@@ -1,57 +1,57 @@
-import React from 'react';
-import { useState } from 'react';
-import { CNavbar,
-  CButton,
-  CNavLink,CNavItem,CFormInput,CNavbarToggler,CDropdownItem,CDropdownToggle,CDropdownDivider,CDropdownMenu,CDropdown,CCollapse,CNavbarNav,CContainer,CNavbarBrand,CForm} from '@coreui/react';
-const Navbar  =()=> {
-  const [visible, setVisible] = useState(false)
-return (
-  <>
-    <CNavbar expand="lg" colorScheme="light" style={{ backgroundColor: '#e3f2fd' }}>
-      <CContainer fluid>
-        <CNavbarBrand href="#">Navbar</CNavbarBrand>
-        <CNavbarToggler
-          aria-label="Toggle navigation"
-          aria-expanded={visible}
-          onClick={() => setVisible(!visible)}
-        />
-        <CCollapse className="navbar-collapse" visible={visible}>
-          <CNavbarNav>
-            <CNavItem>
-              <CNavLink href="#" active>
-                Home
-              </CNavLink>
-            </CNavItem>
-            <CNavItem>
-              <CNavLink href="#">Link</CNavLink>
-            </CNavItem>
-            <CDropdown variant="nav-item" popper={false}>
-              <CDropdownToggle color="secondary">Dropdown button</CDropdownToggle>
-              <CDropdownMenu>
-                <CDropdownItem href="#">Action</CDropdownItem>
-                <CDropdownItem href="#">Another action</CDropdownItem>
-                <CDropdownDivider />
-                <CDropdownItem href="#">Something else here</CDropdownItem>
-              </CDropdownMenu>
-            </CDropdown>
-            <CNavItem>
-              <CNavLink href="#" disabled>
-                Disabled
-              </CNavLink>
-            </CNavItem>
-          </CNavbarNav>
-          <CForm className="d-flex">
-            <CFormInput type="search" className="me-2" placeholder="Search" />
-            <CButton type="submit" color="primary" variant="outline">
-              Search
-            </CButton>
-          </CForm>
-        </CCollapse>
-      </CContainer>
-    </CNavbar>
-  </>
-)
- 
-  }
+// MenuBar.js
+
+import React, { useState } from 'react';
+import './navbar.css'; // Import your CSS file for styling
+import {Bhojpuri,Bengali,Punjabi, BollyWood} from '../../src/Data/data.js';
+import Actor from './Actor.jsx';
+const Navbar = () => {
+  
+
+  const [selectedOption, setSelectedOption] = useState('');
+  const [actor, setActor] = useState(null);
+
+  
+  const handleChange = (event) => {
+    const selectedValue = event.target.value;
+    setSelectedOption(selectedValue);
+    updateActorData(selectedValue);
+  };
+
+  const updateActorData = (value) => {
+    switch (value) {
+      case 'Bhojpuri':
+        setActor(Bhojpuri);
+        break;
+      case 'Bengali':
+        setActor(Bengali);
+        break;
+      case 'Punjabi':
+        setActor(Punjabi);
+        break;
+      case 'Bollywood':
+        setActor(BollyWood);
+        break;
+      default:
+        setActor(null);
+    }
+  };
+
+  return (
+    <>
+     <div className="m-2 navbar">
+      <div className="dropdown">
+        <select className="custom-select" value={selectedOption} onChange={handleChange}>
+          <option value="" disabled hidden>Book Now</option>
+          <option value="Bollywood">Bollywood</option>
+          <option value="Bhojpuri">Bhojpuri</option>
+          <option value="Bengali">Bengali</option>
+          <option value="Punjabi">Punjabi</option>
+        </select>
+      </div>
+    </div>
+    <Actor data={actor}/>
+      </>
+  );
+};
 
 export default Navbar;

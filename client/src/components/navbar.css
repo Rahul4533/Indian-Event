@@ -1,113 +1,46 @@
-body{
-  overflow-x: hidden;
-  background-color: antiquewhite;
+
+
+.navbar{
+  background-image: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
+  display: flex;
+  justify-content: flex-end;
+  width: auto;
+  height: 100px;
+  border-radius: 10px;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden; /* Ensures rounded corners and shadow are visible */
 }
 
-.logo{
-    display: flex;
-    padding:20px;
-   
-}
-.logo img{
-    margin-left: 50px;
-    height: 100px;
-    width: 100px;
-    
+/* DropdownSelect.css */
+
+.dropdown {
+  margin: 20px;
 }
 
+.custom-select {
+  width: 100%; /* Take full width of its container */
+  appearance: none; /* Remove default select arrow */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  padding: 8px 12px;
+  font-size: 16px;
+  cursor: pointer;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #d71010;
+  background-image: linear-gradient(to bottom, #f9f9f9, #e9ecef);
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25); /* Optional: Add focus styling */
 
-.links{
-    list-style-type: none;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    margin-left: 50%;
-    
+  /* Responsive adjustments */
+  @media (max-width: 768px) {
+    font-size: 14px; /* Adjust font size for smaller screens */
+  }
+}
+.custom-select:hover {
+  box-shadow: 0 0 0 0.2rem rgba(14, 89, 168, 0.25); /* Optional: Hover effect */
 }
 
-.links button{
-    margin-left: 10%;
+.custom-select:focus {
+  outline: none;
+  box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Optional: Focus effect */
 }
-
-
-
-.button {
-    /* Base styles */
-    font-size: 16px;
-    font-weight: bold;
-    color: #fff;
-    background: linear-gradient(135deg, #7a1f7d 0%, #4b0082 100%);
-    position:relative;
-    border-radius: 5px;
-    padding: 10px 20px;
-    cursor: pointer;
-  
-    /* Shadow effect */
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
-  
-    /* Transition effect for hover */
-    transition: background-color 0.3s, box-shadow 0.3s;
-  }
-  
-  .button:hover {
-    /* Hover effect */
-    background: linear-gradient(135deg, #6c1ecf 0%, #2f006e 100%);
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.4);
-
-  }
-
-  .button .tooltip {
-    visibility: hidden;
-    width: 80px;
-    background-color: #333;
-    color: #fff;
-    text-align: center;
-    border-radius: 5px;
-    padding: 5px 0;
-    position: absolute;
-    top: -35px; /* Position the tooltip above the button */
-    left: 50%;
-    transform: translateX(-50%);
-    opacity: 0;
-    transition: opacity 0.3s;
-    font-size: 14px;
-    z-index: 1;
-  }
-  
-  /* Tooltip arrow */
-  .button .tooltip::after {
-    content: "";
-    position: absolute;
-    top: 100%; /* Arrow pointing down */
-    left: 50%;
-    margin-left: -5px;
-    border-width: 5px;
-    border-style: solid;
-    border-color: #333 transparent transparent transparent;
-  }
-  
-  /* Show tooltip on button hover */
-  .button:hover .tooltip {
-    visibility: visible;
-    opacity: 1;
-  }
-
-  .back{
-       border: none;
-  }
-
-  @media (max-width: 500px) {
-    .logo {
-      justify-content: center;
-      margin-bottom: 10px;
-    }
-  
-    .links {
-      justify-content: center;
-      flex-wrap: wrap;
-    }
-  
-    .links button {
-      margin: 5px;
-    }
-  }
