@@ -94,7 +94,7 @@ body{
        border: none;
   }
 
-  @media (max-width: 768px) {
+  @media (max-width: 500px) {
     .logo {
       justify-content: center;
       margin-bottom: 10px;
