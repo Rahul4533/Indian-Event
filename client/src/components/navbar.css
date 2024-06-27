@@ -5,6 +5,7 @@ body{
 
 .logo{
     display: flex;
+    padding:20px;
    
 }
 .logo img{
