@@ -22,4 +22,9 @@
   .terms-container li {
     margin-bottom: 15px;
   }
+
+  .confirm-btn {
+    display: block;
+    margin: 20px auto 0;
+  }
   

@@ -21,7 +21,7 @@ const Forms = () => {
   };
 
   const handleBack = () => {
-    navigate(-1); // Navigate back to the previous page
+    navigate('/'); // Navigate back to the previous page
   };
 
   return (

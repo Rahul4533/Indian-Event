@@ -1,7 +1,14 @@
 import React from 'react';
 import './TermsAndConditions.css'; // Import your CSS file
-
+import { Button } from 'antd';
+import { useNavigate } from 'react-router-dom';
 const TermsAndConditions = () => {
+
+  const navigate = useNavigate();
+
+  const handleConfirm = () => {
+    navigate('/Booking'); // Change '/form' to the correct path of your form page
+  };
   return (
     <div className="terms-container">
       <h1>Terms and Conditions</h1>
@@ -28,6 +35,9 @@ const TermsAndConditions = () => {
           Under any circumstances, if any dispute arises between the party and the company, it will be settled by the Mumbai High Court.
         </li>
       </ol>
+      <Button type="primary" onClick={handleConfirm} className="confirm-btn">
+        OK
+      </Button>
     </div>
   );
 };
