@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { BrowserRouter as Router, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import './App.css'; // Import your CSS file for styling
 import Forms from './components/form/Form';
@@ -19,10 +19,11 @@ const App = () => {
         <Routes>
           <Route path="/" element={<>
           <Navbar/>
-           <Forms/>
+           
            <TermsAndConditions/>
            <Footer/>
           </>} />
+          <Route path='/Booking' element={<Forms/>}/>
         </Routes>
     </Router>
   );

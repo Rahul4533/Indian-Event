@@ -82,7 +82,7 @@ const BollyWood=[
     {
         id:18,
         name:"Sunny Leone",
-        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSmTd1_goZ0waTJmDteF5WrM11mxX4f6iDcMA&s"
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRKk7nN_reDcI2jVfSUyfAMhFbspDBfKPSQJg&s"
     },
     {
         id:19,
@@ -102,22 +102,22 @@ const BollyWood=[
     {
         id:22,
         name:"Shardha Kappor",
-        image:""
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTr3i1deW7P3qgEQ4QCU84CdNM2NPU-wzsuJQ&s"
     },
     {
         id:23,
         name:"Allia Bhatt",
-        image:""
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQGsGsFrtqiBZTXDpiufnX1I2JLnbeSYxzLJw&s"
     },
     {
         id:24,
         name:"Priyanka chopra",
-        image:""
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSFVhdozZGhEnAIB5kN-QQ9ZgznKEgMjAw3Bw&s"
     },
     {
         id:25,
         name:"Sonam Kapoor",
-        image:""
+        image:"https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX2OMb1HvNosx42rxK9AJrT5bcgLPZrUuagQ&s"
     }
 
 ]

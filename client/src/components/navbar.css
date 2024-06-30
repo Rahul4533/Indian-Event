@@ -44,3 +44,15 @@
   outline: none;
   box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.5); /* Optional: Focus effect */
 }
+
+.drawer-btn {
+  position: relative;
+  top: 0px;
+  right: 10px;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  z-index: 1001;
+}

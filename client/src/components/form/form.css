@@ -11,3 +11,49 @@
 .form h4 {
   margin-bottom: 20px;
 }
+
+.form-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background: linear-gradient(135deg, #ff9a9e 0%, #fad0c4 99%, #fad0c4 100%);
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  color: #333;
+}
+
+.form-title {
+  text-align: center;
+  margin-bottom: 20px;
+  font-size: 24px;
+  color: #fff;
+}
+
+.form-content {
+  display: flex;
+  flex-direction: column;
+}
+
+.section-title {
+  margin-top: 20px;
+  color: #fff;
+}
+
+.form-buttons {
+  display: flex;
+  justify-content: space-between;
+  margin-top: 20px;
+}
+
+.form-btn {
+  width: 100%;
+}
+
+@media (max-width: 768px) {
+  .form-buttons {
+    flex-direction: column;
+  }
+  .form-btn {
+    margin-bottom: 10px;
+  }
+}
