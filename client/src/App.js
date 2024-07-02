@@ -6,6 +6,7 @@ import Forms from './components/form/Form';
 import TermsAndConditions from './components/Term&Condition/Term';
 import Footer from './components/Footer';
 import Navbar from './components/Navbar';
+import AboutUsPage from './Pages /Theme/theme';
 
 
 const App = () => {
@@ -19,7 +20,7 @@ const App = () => {
         <Routes>
           <Route path="/" element={<>
           <Navbar/>
-           
+           <AboutUsPage/>
            
            <Footer/>
           </>} />
