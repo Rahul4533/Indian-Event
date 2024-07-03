@@ -10,7 +10,7 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
         <li><a href="#about">About</a></li>
        <li><Link to={'/Booking'}>Booking Form</Link></li>
         <li><a href="#contacts">Contacts</a></li>
-        <li><a href="#branches">Branches</a></li>
+        <li><a href="/branch">Branches</a></li>
       </ul>
     </div>
   );
