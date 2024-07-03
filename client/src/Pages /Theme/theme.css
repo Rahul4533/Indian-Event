@@ -39,4 +39,28 @@
     text-align: center;
     padding: 10px 0;
   }
-  
+  /* Existing styles remain unchanged */
+
+/* Existing styles remain unchanged */
+
+.title {
+  font-size: 1.75em; /* Default size for larger screens */
+  margin-bottom: 15px;
+  text-align: center;
+  word-wrap: break-word; /* Ensures long words break to the next line */
+}
+
+/* Media query for tablets and below */
+@media (max-width: 768px) {
+  .title {
+    font-size: 1.5em; /* Adjust font size for tablets and below */
+  }
+}
+
+/* Media query for small devices like iPhone SE */
+@media (max-width: 375px) {
+  .title {
+    font-size: 1.25em; /* Smaller font size for very small devices */
+  }
+}
+

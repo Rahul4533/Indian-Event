@@ -15,7 +15,7 @@ const AboutUsPage = () => {
         <Row justify="center">
           <Col xs={24} sm={20} md={16} lg={12}>
             <Card className="about-card">
-              <Title level={3}>Welcome to Indiana Event Celebrity Management!</Title>
+              <Title level={3} className="title">Welcome to Indiana Event Celebrity Management!</Title>
               <Paragraph>
                 At Indiana Event Celebrity Management, we specialize in bringing star power to your events. Our team of experienced professionals is dedicated to ensuring your event stands out by featuring high-profile celebrities who captivate and entertain your guests.
               </Paragraph>
