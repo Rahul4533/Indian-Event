@@ -9,7 +9,7 @@ const AboutUsPage = () => {
   return (
     <Layout className="layout">
       <Header className="header">
-        <Title level={1} style={{ color: 'white' }}>Indiana Event Celebrity Management</Title>
+        <h1>Indiana Event Celebrity Management</h1>
       </Header>
       <Content className="content">
         <Row justify="center">
