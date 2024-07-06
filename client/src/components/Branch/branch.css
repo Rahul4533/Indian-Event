@@ -1,92 +1,113 @@
-body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #f4f4f9;
-  }
-  
+/* branch.css */
+
+.about-us {
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b); /* Refined gradient */
+  padding: 40px 20px;
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  color: #fff;
+  max-width: 900px;
+  margin: 0 auto;
+  font-family: 'Roboto', sans-serif;
+  text-align: center;
+}
+
+.back-button {
+  background: #ff7e5f;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background 0.3s ease;
+}
+
+.back-button:hover {
+  background: #feb47b;
+}
+
+h1 {
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+p {
+  font-size: 1.2rem;
+  margin-bottom: 30px;
+  font-style: italic;
+}
+
+.branch {
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  text-align: left;
+}
+
+.branch h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+}
+
+.branch address {
+  font-style: normal;
+  line-height: 1.6;
+}
+
+.branch strong {
+  display: block;
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
   .about-us {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-    background: #fff;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    position: relative;
+    padding: 30px 15px;
+    border-radius: 10px;
   }
-  
+
   .back-button {
-    display: inline-block;
-    margin-bottom: 20px;
-    padding: 10px 20px;
-    font-size: 16px;
-    color: #fff;
-    background-color: #007bff;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    text-align: center;
+    font-size: 0.9rem;
+    padding: 8px 16px;
   }
-  
-  .back-button:hover {
-    background-color: #0056b3;
+
+  h1 {
+    font-size: 2rem;
   }
-  
-  .about-us h1 {
-    text-align: center;
-    color: #333;
-    margin-bottom: 20px;
+
+  p {
+    font-size: 1rem;
   }
-  
-  .about-us p {
-    text-align: center;
-    color: #555;
-    margin-bottom: 20px;
-  }
-  
-  .branch {
-    margin-bottom: 20px;
-    padding: 10px;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-    background: #f9f9f9;
-  }
-  
+
   .branch h2 {
-    color: #007bff;
-    margin-bottom: 10px;
+    font-size: 1.5rem;
   }
-  
-  .branch address {
-    margin: 0;
-    color: #555;
-    line-height: 1.6;
-    font-style: normal;
+}
+
+@media (max-width: 480px) {
+  .about-us {
+    padding: 20px 10px;
+    border-radius: 8px;
   }
-  
-  strong {
-    color: #000;
+
+  .back-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
   }
-  
-  @media (max-width: 600px) {
-    .about-us {
-      padding: 10px;
-    }
-  
-    .back-button {
-      font-size: 14px;
-      padding: 8px 16px;
-    }
-  
-    .branch {
-      padding: 8px;
-    }
-  
-    .branch h2 {
-      font-size: 1.2em;
-    }
-  
-    .branch address {
-      font-size: 0.9em;
-    }
+
+  h1 {
+    font-size: 1.8rem;
   }
-  
+
+  p {
+    font-size: 0.9rem;
+  }
+
+  .branch h2 {
+    font-size: 1.3rem;
+  }
+}

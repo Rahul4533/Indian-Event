@@ -1,66 +1,116 @@
-/* Global styles for the theme */
-.layout {
-    min-height: 100vh;
-  }
-  
-  .header {
-    background: linear-gradient(135deg, #ff6600 0%, #ffcc00 100%);
-    display: flex;
-    align-items: center;
-    justify-content: center;
-  }
-  
-  .content {
-    padding: 50px 20px;
-    background-color: #f0f2f5;
-  }
-  
-  .about-card {
-    background-color: white;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    padding: 30px;
-  }
-  
-  .contact-button {
-    margin-top: 20px;
-    background-color: #ff6600;
-    border: none;
-    color: white;
-  }
-  
-  .contact-button:hover {
-    background-color: #ffcc00;
-    color: #333;
-  }
-  
-  .footer {
-    background: #001529;
-    text-align: center;
-    padding: 10px 0;
-  }
-  /* Existing styles remain unchanged */
+/* theme.css */
 
-/* Existing styles remain unchanged */
+.layout {
+  min-height: 100vh;
+  background: #f0f2f5;
+}
+
+.header {
+  background: linear-gradient(to right, #3a1c71, #d76d77, #ffaf7b);
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.header h1 {
+  color: #fff;
+  margin: 0;
+  font-size: 1.8rem;
+}
+
+.back-button {
+  background: #ff7e5f;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin: 20px auto;
+  display: block;
+}
+
+.back-button:hover {
+  background: #feb47b;
+}
+
+.content {
+  padding: 50px 20px;
+}
+
+.about-card {
+  border-radius: 15px;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
 
 .title {
-  font-size: 1.75em; /* Default size for larger screens */
-  margin-bottom: 15px;
+  color: #3a1c71;
+}
+
+.contact-button {
+  background: #3a1c71;
+  border: none;
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: background 0.3s ease;
+  margin-top: 20px;
+}
+
+.contact-button:hover {
+  background: #d76d77;
+}
+
+.footer {
+  background: #3a1c71;
+  padding: 10px 20px;
   text-align: center;
-  word-wrap: break-word; /* Ensures long words break to the next line */
 }
 
-/* Media query for tablets and below */
+.footer p {
+  color: #fff;
+  margin: 0;
+}
+
 @media (max-width: 768px) {
-  .title {
-    font-size: 1.5em; /* Adjust font size for tablets and below */
+  .header h1 {
+    font-size: 1.5rem;
+  }
+
+  .back-button {
+    font-size: 0.9rem;
+    padding: 8px 16px;
+  }
+
+  .content {
+    padding: 30px 15px;
+  }
+
+  .about-card {
+    padding: 20px 15px;
   }
 }
 
-/* Media query for small devices like iPhone SE */
-@media (max-width: 375px) {
-  .title {
-    font-size: 1.25em; /* Smaller font size for very small devices */
+@media (max-width: 480px) {
+  .header h1 {
+    font-size: 1.2rem;
+  }
+
+  .back-button {
+    font-size: 0.8rem;
+    padding: 6px 12px;
+  }
+
+  .content {
+    padding: 20px 10px;
+  }
+
+  .about-card {
+    padding: 15px 10px;
   }
 }
-

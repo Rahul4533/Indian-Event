@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+
 import { BrowserRouter as Router, Routes, Route} from 'react-router-dom';
 
 import './App.css'; // Import your CSS file for styling
@@ -8,6 +8,7 @@ import Footer from './components/Footer';
 import Navbar from './components/Navbar';
 import AboutUsPage from './Pages /Theme/theme';
 import Branches from './components/Branch/Branch';
+import HeadingComponent from './components/Heading/Heading';
 
 
 const App = () => {
@@ -20,12 +21,13 @@ const App = () => {
        
         <Routes>
           <Route path="/" element={<>
+          
           <Navbar/>
-           <AboutUsPage/>
-           
+          <HeadingComponent />
            <Footer/>
           </>} />
           <Route path='/Booking' element={<Forms/>}/>
+          <Route path='/about' element={<AboutUsPage/>}/>
           <Route path='/term' element={<TermsAndConditions/>}/>
           <Route path='/branch' element={<Branches/>}/>
         </Routes>

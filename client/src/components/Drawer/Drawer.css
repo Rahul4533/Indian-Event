@@ -1,74 +1,82 @@
+/* Base styling for the drawer */
 .drawer {
-    position: fixed;
-    top: 0;
-    right: -300px;
-    width: 300px;
-    height: 100%;
-    background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
-    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5);
-    transition: right 0.3s ease;
-    z-index: 1000;
-    padding: 20px;
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
+  position: fixed;
+  top: 0;
+  right: -300px; /* Initially hidden off-screen */
+  width: 300px;
+  height: 100%;
+  background: linear-gradient(135deg, #ff7e5f, #feb47b); /* Gradient background */
+  box-shadow: -2px 0 5px rgba(0, 0, 0, 0.5); /* Shadow for depth */
+  transition: right 0.3s ease; /* Smooth sliding animation */
+  z-index: 1000;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  border-top-left-radius: 10px; /* Rounded corners */
+  border-bottom-left-radius: 10px; /* Rounded corners */
+}
+
+/* Drawer open state */
+.drawer.open {
+  right: 0; /* Slide in from the right */
+}
+
+/* Close button styling */
+.close-btn {
+  align-self: flex-end;
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #fff;
+  margin-bottom: 20px;
+  padding: 5px;
+  transition: color 0.3s ease; /* Smooth color transition */
+  border-radius: 50%; /* Rounded close button */
+}
+
+.close-btn:hover {
+  color: #ff7e5f; /* Highlight color on hover */
+}
+
+/* List styling */
+.drawer ul {
+  list-style: none;
+  padding: 0;
+  width: 100%;
+}
+
+/* List item styling */
+.drawer ul li {
+  margin: 10px 0;
+  width: 100%;
+}
+
+/* Link styling */
+.drawer ul li a {
+  text-decoration: none;
+  color: #fff; /* White text color */
+  font-size: 18px;
+  width: 100%;
+  display: block;
+  padding: 10px;
+  border-radius: 5px; /* Rounded corners for links */
+  transition: background 0.3s ease; /* Smooth background transition */
+}
+
+/* Link hover effect */
+.drawer ul li a:hover {
+  background: rgba(255, 255, 255, 0.2); /* Light background on hover */
+}
+
+/* Responsive styling */
+@media (max-width: 768px) {
+  .drawer {
+    width: 80%; /* Adjust width on smaller screens */
+    right: -80%; /* Initially hidden off-screen */
   }
-  
   .drawer.open {
-    right: 0;
+    right: 0; /* Slide in when open */
   }
-  
-  .close-btn {
-    align-self: flex-end;
-    background: none;
-    border: none;
-    font-size: 24px;
-    cursor: pointer;
-    color: #fff;
-    margin-bottom: 20px;
-    padding: 5px;
-    transition: color 0.3s ease;
-  }
-  
-  .close-btn:hover {
-    color: #ff7e5f;
-  }
-  
-  .drawer ul {
-    list-style: none;
-    padding: 0;
-    width: 100%;
-  }
-  
-  .drawer ul li {
-    margin: 10px 0;
-    width: 100%;
-  }
-  
-  .drawer ul li a {
-    text-decoration: none;
-    color: #fff;
-    font-size: 18px;
-    width: 100%;
-    display: block;
-    padding: 10px;
-    border-radius: 5px;
-    transition: background 0.3s ease;
-  }
-  
-  .drawer ul li a:hover {
-    background: rgba(255, 255, 255, 0.2);
-  }
-  
-  @media (max-width: 768px) {
-    .drawer {
-      width: 80%;
-      right: -80%;
-    }
-    .drawer.open {
-      right: 0;
-    }
-  }
-  
- 
-  
+}

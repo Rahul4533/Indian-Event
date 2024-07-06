@@ -57,6 +57,7 @@ const AboutUsPage = () => {
             </Card>
           </Col>
         </Row>
+        <Button className="back-button" onClick={() => window.history.back()}>Back</Button>
       </Content>
       <Footer className="footer">
         <Paragraph style={{ color: 'white' }}>© 2024 Indiana Event Celebrity Management. All rights reserved.</Paragraph>

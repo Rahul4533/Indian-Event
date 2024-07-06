@@ -7,7 +7,7 @@ const Drawer = ({ isOpen, toggleDrawer }) => {
       <button className="close-btn" onClick={toggleDrawer}>×</button>
       <ul>
         <li><a href="#services">Services</a></li>
-        <li><a href="#about">About</a></li>
+        <li><Link to={'/about'}>AboutUS</Link></li>
        <li><Link to={'/Booking'}>Booking Form</Link></li>
         <li><a href="#contacts">Contacts</a></li>
         <li><Link to={'/branch'}>Branches</Link></li>
