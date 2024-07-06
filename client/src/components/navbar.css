@@ -1,9 +1,5 @@
 
 
-
-
-/* navbar.css */
-
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -15,6 +11,12 @@
 
 .navbar-logo img {
   height: 50px; /* Adjust size as needed */
+}
+
+.navbar-dropdown {
+  flex: 1;
+  display: flex;
+  justify-content: center;
 }
 
 .navbar-dropdown .custom-select {
@@ -48,7 +50,7 @@
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
-    align-items: flex-start;
+    padding: 10px;
   }
 
   .navbar-logo {
@@ -56,9 +58,6 @@
   }
 
   .navbar-dropdown {
-    width: 100%;
-    display: flex;
-    justify-content: center;
     margin-bottom: 10px;
   }
 
