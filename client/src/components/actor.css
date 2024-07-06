@@ -3,7 +3,7 @@
   flex-wrap: wrap;
   justify-content: center; /* Center horizontally */
   align-items: center; /* Center vertically */
-  min-height: 100vh; /* Ensure it takes the full height of the viewport */
+  
 }
 
 .card-item {
@@ -32,7 +32,7 @@
 .card-img-top {
   width: 100%;
   height: 100%;
-  object-fit: contain; /* Ensures image covers the container */
+  object-fit: contain; /* Ensures image fits within the container without being cropped */
 }
 
 .card-body {
@@ -152,3 +152,4 @@
 .popup form button[type="submit"]:hover {
   background-color: #0056b3;
 }
+
