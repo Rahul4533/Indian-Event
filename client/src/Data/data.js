@@ -227,6 +227,53 @@ const Bhojpuri = [
 const Bengali = [
   {
     id: 1,
+    name:"",
+    image:""
+  },
+  {
+    id: 1,
+    name:"",
+    image:""
+  },
+  {
+    id: 1,
+    name:"",
+    image:""
+  },
+  {
+    id: 1,
+    name:"",
+    image:""
+  },
+  {
+    id: 1,
+    name:"",
+    image:""
+  },
+  {
+    id: 1,
+    name:"",
+    image:""
+  },
+  {
+    id: 1,
+    name:"",
+    image:""
+  },
+  {
+    id: 1,
+    name:"",
+    image:""
+  },
+  {
+    id: 1,
+    name:"",
+    image:""
+  },
+  {
+    id: 1,
+    name:"",
+    image:""
   },
 ];
 
