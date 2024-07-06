@@ -21,7 +21,7 @@ const Actor = React.memo(({ data }) => {
         {data?.map((item, index) => (
           <div key={index} className="card-item">
             <div className="card-img-container">
-              <img className="card-img-top" src={item.image} alt={`${item.name} image`} />
+              <img className="card-img-top" src={item.image} alt={`${item.name} `} />
             </div>
             <div className="card-body">
               <h5 className="card-title">{item.name}</h5>

@@ -1,4 +1,4 @@
-import { Form, Input, Row, Col, DatePicker, Checkbox, message, Button } from 'antd';
+import { Form, Input, Row, Col, Checkbox, message, Button } from 'antd';
 import './form.css';
 import { Link } from 'react-router-dom';
 import axios from 'axios';
