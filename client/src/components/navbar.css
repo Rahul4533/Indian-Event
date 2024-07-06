@@ -1,5 +1,7 @@
 
 
+
+
 .navbar {
   display: flex;
   justify-content: space-between;
@@ -7,6 +9,7 @@
   padding: 10px 20px;
   background-image: linear-gradient(to right, #7F7FD5, #86A8E7, #91EAE4);
   box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 70px; /* Fixed height to ensure consistency */
 }
 
 .navbar-logo img {
@@ -49,19 +52,25 @@
 
 @media (max-width: 768px) {
   .navbar {
-    flex-direction: column;
-    padding: 10px;
+    flex-direction: row;
+    height: auto; /* Remove fixed height for better flexibility */
   }
 
   .navbar-logo {
-    margin-bottom: 10px;
+    flex: 1;
+    display: flex;
+    justify-content: flex-start;
   }
 
   .navbar-dropdown {
-    margin-bottom: 10px;
+    flex: 2;
+    display: flex;
+    justify-content: center;
   }
 
   .drawer-btn {
-    align-self: flex-end;
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
   }
 }
